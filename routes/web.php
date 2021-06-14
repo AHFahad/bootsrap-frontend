@@ -51,18 +51,26 @@ Route::get('/seller/login', function () {
 Route::get('/seller/register', function () {
     return view('seller/sellerRegister');
 });
-Route::get('/seller/applyforprimeseller', function () {
-    return view('seller/applyForPrimeSeller');
-});
-Route::get('/seller/createsellpost', function () {
-    return view('seller/CreateSellPost');
-});
-Route::get('/seller/myposts', function () {
-    return view('seller/myposts');
-});
-Route::get('/seller/contactsupport', function () {
-    return view('seller/sellerContactSupport');
-});
+
+// Route::get('/seller/applyforprimeseller', function () {
+//     return view('seller/applyForPrimeSeller');
+// });
+
+
+Route::get('/seller/home','SellerController@home')->name('seller.home');
+Route::get('/seller/applyforprimeseller','SellerController@applyForPrimeSeller')->name('seller.apply.prime');
+Route::get('/seller/createsellpost','SellerController@createSellPost')->name('seller.create.sell.post');
+Route::get('/seller/myposts','SellerController@myPosts')->name('seller.posts');
+Route::get('/seller/statements','SellerController@statements')->name('seller.statements');
+Route::get('/seller/orders','SellerController@orders')->name('seller.orders');
+Route::get('/seller/contactsupport','SellerController@contactSupport')->name('seller.contact.support');
+Route::get('/seller/orderdetails','SellerController@orderDetails')->name('seller.order.details');
+Route::get('/seller/editsellpost','SellerController@editSellPost')->name('seller.edit.sell.post');
+Route::get('/seller/editprofile','SellerController@editProfile')->name('seller.edit.profile');
+Route::get('/seller/statementdetails','SellerController@statementDetails')->name('seller.statement.details');
+
+
+
 
 
 

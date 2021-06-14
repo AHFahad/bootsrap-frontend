@@ -69,56 +69,8 @@
 
 
     <div class="text-center mt-5">
-        <h1>Add Product details</h1>
+        <h1>Welcome Seller Home</h1>
     </div>
-    <div class="container">
-
-    <form class="row g-3">
-
-
-        <div class="mb-3">
-            <label for="formFile" class="form-label">Select photo</label>
-            <input class="form-control" type="file" id="formFile">
-        </div>
-
-
-        <div class="col-12">
-            <label for="exampleInputEmail1" class="form-label">Product Title</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        </div>
-
-        <div class="col-12">
-            <label for="exampleInputEmail1" class="form-label">ADD price In Taka*</label>
-            <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        </div>
-
-
-        <div class="col-12">
-            <label for="exampleInputEmail1" class="form-label">Select Payment method</label>
-            <select class="form-select" aria-label="Default select example">
-                <option selected>none</option>
-                <option value="1">Bikash</option>
-                <option value="2">Rocket</option>
-                <option value="3">bank</option>
-              </select>
-        </div>
-
-        <div class="col-12">
-            <label for="exampleInputEmail1" class="form-label">Payment recive NO:</label>
-            <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        </div>
-
-
-        <div class="form-floating">
-            {{-- <label for="exampleInputEmail1" class="form-label">Write Product Desciption</label> --}}
-            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-            <label for="floatingTextarea2">Write Product Desciption</label>
-        </div>
-
-        <div class="col-12">
-            <button type="submit" class="btn btn-primary">Post</button>
-        </div>
-    </form>
 
 
     <!-- Option 1: Bootstrap Bundle with Popper -->

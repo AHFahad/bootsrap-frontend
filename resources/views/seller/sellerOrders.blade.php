@@ -10,10 +10,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
-    <title>Post a product</title>
+    <title>My posts</title>
 </head>
 
 <body>
+
+    {{-- nav bar --}}
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">VCES</a>
@@ -67,58 +69,44 @@
         </div>
     </nav>
 
-
-    <div class="text-center mt-5">
-        <h1>Add Product details</h1>
+    <div class="text-center mt-5 mb-5">
+        <h1>orders</h1>
     </div>
+
+        {{-- orders --}}
     <div class="container">
+        <table  class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Order NO</th>
+                <th scope="col">Date</th>
+                <th scope="col">Details</th>
+                <th scope="col">Actions</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>0123</td>
+                <td>2/05/2020</td>
+                <td>xyz</td>
+                <td><a class="btn btn-primary" href="{{ route('seller.order.details') }}">Order Details</a></td>
+                <td><a class="btn btn-danger" href="#cancel">Cancel</a></td>
+              </tr>
+              <td>1123</td>
+              <td>3/06/2020</td>
+              <td>yst</td>
+              <td><a class="btn btn-primary" href="{{ route('seller.order.details') }}">Order Details</a></td>
+              <td><a class="btn btn-danger" href="#cancel">Cancel</a></td>
+              </tr>
 
-    <form class="row g-3">
+            </tbody>
+        </table>
 
-
-        <div class="mb-3">
-            <label for="formFile" class="form-label">Select photo</label>
-            <input class="form-control" type="file" id="formFile">
-        </div>
-
-
-        <div class="col-12">
-            <label for="exampleInputEmail1" class="form-label">Product Title</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        </div>
-
-        <div class="col-12">
-            <label for="exampleInputEmail1" class="form-label">ADD price In Taka*</label>
-            <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        </div>
-
-
-        <div class="col-12">
-            <label for="exampleInputEmail1" class="form-label">Select Payment method</label>
-            <select class="form-select" aria-label="Default select example">
-                <option selected>none</option>
-                <option value="1">Bikash</option>
-                <option value="2">Rocket</option>
-                <option value="3">bank</option>
-              </select>
-        </div>
-
-        <div class="col-12">
-            <label for="exampleInputEmail1" class="form-label">Payment recive NO:</label>
-            <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        </div>
+    </div>
 
 
-        <div class="form-floating">
-            {{-- <label for="exampleInputEmail1" class="form-label">Write Product Desciption</label> --}}
-            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-            <label for="floatingTextarea2">Write Product Desciption</label>
-        </div>
 
-        <div class="col-12">
-            <button type="submit" class="btn btn-primary">Post</button>
-        </div>
-    </form>
 
 
     <!-- Option 1: Bootstrap Bundle with Popper -->

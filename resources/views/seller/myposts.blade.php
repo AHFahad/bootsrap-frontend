@@ -6,9 +6,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        .checked {
+          color: orange;
+        }
+    </style>
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+
 
     <title>My posts</title>
 </head>
@@ -27,17 +38,17 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="{{ route('seller.home') }}">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Chat Box</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Apply For prime Seller!</a>
+                        <a class="nav-link" href="{{ route('seller.apply.prime') }}">Apply For prime Seller!</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Create selling post</a>
+                        <a class="nav-link" href="{{ route('seller.create.sell.post') }}">Create selling post</a>
                     </li>
 
                     <li class="nav-item dropdown">
@@ -46,11 +57,11 @@
                             More
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Edit Profile</a></li>
-                            <li><a class="dropdown-item" href="#">Statements</a></li>
-                            <li><a class="dropdown-item" href="#">Order Histroy</a></li>
-                            <li><a class="dropdown-item" href="#">My posts</a></li>
-                            <li><a class="dropdown-item" href="#">Contact support</a></li>
+                            <li><a class="dropdown-item" href="{{ route('seller.edit.profile') }}">Edit Profile</a></li>
+                            <li><a class="dropdown-item" href="{{ route('seller.statements') }}">Statements</a></li>
+                            <li><a class="dropdown-item" href="{{ route('seller.orders') }}">Orders list</a></li>
+                            <li><a class="dropdown-item" href="{{ route('seller.posts') }}">My posts</a></li>
+                            <li><a class="dropdown-item" href="{{ route('seller.contact.support') }}">Contact support</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
@@ -82,7 +93,7 @@
 
             <div class="col-sm-4">
             <div class="card" style="max-width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
+                <img src="https://i2.wp.com/pebelize.com/wp-content/uploads/2019/09/steam_10.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                 <h5 class="card-title">Card title</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -91,17 +102,18 @@
                 <li class="list-group-item">Price : 760</li>
                 <li class="list-group-item">A second item</li>
                 <li class="list-group-item">Ratting : 4.3/5</li>
+
                 </ul>
                 <div class="card-body">
                     <a href="#" class="btn btn-primary">Go to post</a>
-                    <a href="#" class="btn btn-info">go to shop</a>
+                    <a href="{{ route('seller.edit.sell.post') }}" class="btn btn-info">Edit post</a>
                 </div>
             </div>
             </div>
 
             <div class="col-sm-4">
             <div class="card" style="max-width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
+                <img src="https://i2.wp.com/pebelize.com/wp-content/uploads/2019/09/steam_10.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                 <h5 class="card-title">Card title</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -113,7 +125,7 @@
                 </ul>
                 <div class="card-body">
                         <a href="#" class="btn btn-primary">Go to post</a>
-                        <a href="#" class="btn btn-info">go to shop</a>
+                        <a href="{{ route('seller.edit.sell.post') }}" class="btn btn-info">Edit post</a>
                 </div>
             </div>
             </div>
@@ -121,7 +133,7 @@
 
             <div class="col-sm-4">
             <div class="card" style="max-width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
+                <img src="https://i2.wp.com/pebelize.com/wp-content/uploads/2019/09/steam_10.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                 <h5 class="card-title">Card title</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -133,7 +145,7 @@
                 </ul>
                 <div class="card-body">
                         <a href="#" class="btn btn-primary">Go to post</a>
-                        <a href="#" class="btn btn-info">go to shop</a>
+                        <a href="{{ route('seller.edit.sell.post') }}" class="btn btn-info">Edit post</a>
                 </div>
             </div>
 

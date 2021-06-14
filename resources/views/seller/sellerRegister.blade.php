@@ -27,17 +27,17 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="{{ route('seller.home') }}">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Chat Box</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Apply For prime Seller!</a>
+                        <a class="nav-link" href="{{ route('seller.apply.prime') }}">Apply For prime Seller!</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Create selling post</a>
+                        <a class="nav-link" href="{{ route('seller.create.sell.post') }}">Create selling post</a>
                     </li>
 
                     <li class="nav-item dropdown">
@@ -46,11 +46,11 @@
                             More
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Edit Profile</a></li>
-                            <li><a class="dropdown-item" href="#">Statements</a></li>
-                            <li><a class="dropdown-item" href="#">Order Histroy</a></li>
-                            <li><a class="dropdown-item" href="#">My posts</a></li>
-                            <li><a class="dropdown-item" href="#">Contact support</a></li>
+                            <li><a class="dropdown-item" href="{{ route('seller.edit.profile') }}">Edit Profile</a></li>
+                            <li><a class="dropdown-item" href="{{ route('seller.statements') }}">Statements</a></li>
+                            <li><a class="dropdown-item" href="{{ route('seller.orders') }}">Orders list</a></li>
+                            <li><a class="dropdown-item" href="{{ route('seller.posts') }}">My posts</a></li>
+                            <li><a class="dropdown-item" href="{{ route('seller.contact.support') }}">Contact support</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
@@ -70,7 +70,6 @@
     </nav>
 
 
-
     <div class="text-center mt-5">
         <h1>Register as a seller</h1>
     </div>
@@ -88,7 +87,7 @@
 
             <div class="mb-3">
                 <label class="form-label">Address</label>
-                <input type="text" class="form-control" id="usAddress" >
+                <input type="text" class="form-control" id="sAddress" >
             </div>
 
             <div class="mb-3">

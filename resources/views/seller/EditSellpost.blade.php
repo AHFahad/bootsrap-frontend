@@ -69,7 +69,7 @@
 
 
     <div class="text-center mt-5">
-        <h1>Add Product details</h1>
+        <h1>Edit Product details</h1>
     </div>
     <div class="container">
 
@@ -77,54 +77,56 @@
 
 
         <div class="mb-3">
-            <label for="formFile" class="form-label">Select photo</label>
+            <label for="formFile" class="form-label">Change Product photo:</label><br>
+            <img src="https://i2.wp.com/pebelize.com/wp-content/uploads/2019/09/steam_10.jpg" class="rounded" alt="Cinque Terre" width="304" height="236">
+            <br>
+            <br>
             <input class="form-control" type="file" id="formFile">
         </div>
 
 
         <div class="col-12">
             <label for="exampleInputEmail1" class="form-label">Product Title</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="steam 10.3 doller">
         </div>
 
-        <div class="col-12">
+          <div class="col-12">
             <label for="exampleInputEmail1" class="form-label">ADD price In Taka*</label>
-            <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        </div>
-
-
-        <div class="col-12">
-            <label for="exampleInputEmail1" class="form-label">Select Payment method</label>
-            <select class="form-select" aria-label="Default select example">
-                <option selected>none</option>
-                <option value="1">Bikash</option>
-                <option value="2">Rocket</option>
-                <option value="3">bank</option>
-              </select>
-        </div>
-
-        <div class="col-12">
-            <label for="exampleInputEmail1" class="form-label">Payment recive NO:</label>
-            <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="970">
         </div>
 
 
         <div class="form-floating">
-            {{-- <label for="exampleInputEmail1" class="form-label">Write Product Desciption</label> --}}
-            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-            <label for="floatingTextarea2">Write Product Desciption</label>
+            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px">steam 10.3 work on any regions without Argentina. fast delivery.</textarea>
+            {{-- <label for="floatingTextarea2">Write Product Desciption</label> --}}
         </div>
 
         <div class="col-12">
             <button type="submit" class="btn btn-primary">Post</button>
+            <a href="#delete" onclick="myDelete()" class="btn btn-danger">Delete</a>
         </div>
     </form>
-
+    {{-- test confirmation --}}
+    <p id="demo"></p>
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
     </script>
+
+    <script>
+    function myDelete() {
+      var txt;
+      var r = confirm("Are you sure ,you want to delete?");
+      if (r == true) {
+        txt = "delete done";
+      } else {
+        txt = "delete cancel";
+      }
+      document.getElementById("demo").innerHTML = txt;
+    }
+    </script>
+
 
 </div>
 </body>
