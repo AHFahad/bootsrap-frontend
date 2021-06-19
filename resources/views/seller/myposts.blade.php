@@ -10,8 +10,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
-        .checked {
-          color: orange;
+        .footer {
+            position: relative;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: red;
+            color: white;
+            text-align: center;
         }
     </style>
 
@@ -44,11 +50,14 @@
                         <a class="nav-link" href="#">Chat Box</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('seller.apply.prime') }}">Apply For prime Seller!</a>
+                        <a class="nav-link" href="{{ route('seller.apply.prime') }}">Upgrade to Prime Seller!</a>
                     </li>
 
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('seller.create.sell.post') }}">Create selling post</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('seller.orders') }}">Orders list</a>
                     </li>
 
                     <li class="nav-item dropdown">
@@ -59,7 +68,6 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="{{ route('seller.edit.profile') }}">Edit Profile</a></li>
                             <li><a class="dropdown-item" href="{{ route('seller.statements') }}">Statements</a></li>
-                            <li><a class="dropdown-item" href="{{ route('seller.orders') }}">Orders list</a></li>
                             <li><a class="dropdown-item" href="{{ route('seller.posts') }}">My posts</a></li>
                             <li><a class="dropdown-item" href="{{ route('seller.contact.support') }}">Contact support</a></li>
                             <li>
@@ -161,6 +169,61 @@
     </script>
 
 </div>
+
+<script src="https://kit.fontawesome.com/d6f10cd10f.js" crossorigin="anonymous"></script>
+
+
+
+
+
+
+{{-- footer --}}
+<footer class="bg-dark text-center text-white container-fluid footer">
+        <!-- Grid container -->
+        <div class="container-fluid">
+          <!-- Section: Social media -->
+          <section class="mb-6">
+            <!-- Facebook -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+
+            <!-- Twitter -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+              ><i class="fab fa-twitter"></i
+            ></a>
+
+            <!-- Google -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+              ><i class="fab fa-google"></i
+            ></a>
+
+            <!-- Instagram -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+              ><i class="fab fa-instagram"></i
+            ></a>
+
+            <!-- Linkedin -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+
+            <!-- Github -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+              ><i class="fab fa-github"></i
+            ></a>
+          </section>
+          <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2020 Copyright:
+          <a class="text-white" href="https://mdbootstrap.com/%22%3EMDBootstrap.com</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
 </body>
 
 </html>

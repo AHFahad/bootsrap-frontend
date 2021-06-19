@@ -9,8 +9,18 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-
-    <title>Post a product</title>
+        <style>
+            .footer {
+                position: relative;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                background-color: red;
+                color: white;
+                text-align: center;
+            }
+        </style>
+    <title>Statement Details</title>
 </head>
 
 <body>
@@ -31,11 +41,14 @@
                         <a class="nav-link" href="#">Chat Box</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('seller.apply.prime') }}">Apply For prime Seller!</a>
+                        <a class="nav-link" href="{{ route('seller.apply.prime') }}">Upgrade to Prime Seller!</a>
                     </li>
 
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('seller.create.sell.post') }}">Create selling post</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('seller.orders') }}">Orders list</a>
                     </li>
 
                     <li class="nav-item dropdown">
@@ -46,7 +59,6 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="{{ route('seller.edit.profile') }}">Edit Profile</a></li>
                             <li><a class="dropdown-item" href="{{ route('seller.statements') }}">Statements</a></li>
-                            <li><a class="dropdown-item" href="{{ route('seller.orders') }}">Orders list</a></li>
                             <li><a class="dropdown-item" href="{{ route('seller.posts') }}">My posts</a></li>
                             <li><a class="dropdown-item" href="{{ route('seller.contact.support') }}">Contact support</a></li>
                             <li>
@@ -69,7 +81,7 @@
 
 
     <div class="text-center mt-5">
-        <h1>Order details</h1>
+        <h1>Statement details</h1>
     </div>
     <div class="container">
 
@@ -137,6 +149,60 @@
     </script>
 
 </div>
+<script src="https://kit.fontawesome.com/d6f10cd10f.js" crossorigin="anonymous"></script>
+
+
+
+
+
+
+{{-- footer --}}
+<footer class="bg-dark text-center text-white container-fluid footer">
+        <!-- Grid container -->
+        <div class="container-fluid">
+          <!-- Section: Social media -->
+          <section class="mb-6">
+            <!-- Facebook -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+
+            <!-- Twitter -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+              ><i class="fab fa-twitter"></i
+            ></a>
+
+            <!-- Google -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+              ><i class="fab fa-google"></i
+            ></a>
+
+            <!-- Instagram -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+              ><i class="fab fa-instagram"></i
+            ></a>
+
+            <!-- Linkedin -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+
+            <!-- Github -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+              ><i class="fab fa-github"></i
+            ></a>
+          </section>
+          <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2020 Copyright:
+          <a class="text-white" href="https://mdbootstrap.com/%22%3EMDBootstrap.com</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
 </body>
 
 </html>

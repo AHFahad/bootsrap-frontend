@@ -33,10 +33,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Market Place</a>
                     </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="/user/history">View history</a>
-                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
@@ -44,6 +40,7 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="#">Edit Profile</a></li>
+                            <li><a class="dropdown-item" href="#">change profile picture</a></li>
                             <li><a class="dropdown-item" href="#">Transaction List</a></li>
                             <li><a class="dropdown-item" href="#">request password recovery</a></li>
                             <li>
@@ -64,49 +61,31 @@
         </div>
     </nav>
 
-    <div class="text-center mt-5">
-        <h1>Register as a Buyer</h1>
-    </div>
-    <div style="max-width:500px;margin:auto;">
-
-
-        <div class="mb-3">
-            <picture>
-                <source srcset="https://media.giphy.com/media/l1J3Gm3IXpk02XF6w/giphy.gif" type="image/svg+xml">
-                {{-- <source srcset="C:\Users\pc\Downloads\A.jpg" type="image/svg+xml"> --}}
-                <img src="..." class="img-fluid img-thumbnail" alt="...">
-            </picture>
-            <a href="#">Change Profile picture</a>
-            {{-- <input class="form-control" type="file" id="formFile"> --}}
-          </div>
-
-        <div class="mb-3">
-            <label class="form-label">Name</label>
-            <input type="text" class="form-control" id="uName" readonly value="ABBD">
-        </div>
-
-        <div class="mb-3">
-            <label class="form-label">Address</label>
-            <input type="text" class="form-control" id="uAddress" readonly value="Mirpur">
-        </div>
-
-        <div class="mb-3">
-            <label class="form-label">Email Address</label>
-            <input type="email" class="form-control" id="uEmail" readonly value="A@gmail.com">
-        </div>
-        <div class="mb-3">
-            <label class="form-label">Password</label>
-            <input type="text" class="form-control" id="uPassword" value="1234" readonly>
-            <a href="#">Change Password</a>
-        </div>
-
-        <div class="mb-3">
-            <label class="form-label">Phone Number</label>
-            <input type="number" class="form-control" id="uPhone" aria-describedby="emailHelp" readonly value="011111111111">
-        </div>
-        <button type="submit" class="btn btn-primary">Ok</button>
+    <div class="text-center mt-5 mb-5">
+        <h1>History</h1>
     </div>
 
+    <table style="margin:auto;max-width:900px" class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Order NO</th>
+            <th scope="col">Date</th>
+            <th scope="col">Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0123</td>
+            <td>2/05/2020</td>
+            <td>xyz</td>
+          </tr>
+          < <td>1123</td>
+          <td>3/06/2020</td>
+          <td>yst</td>
+          </tr>
+
+        </tbody>
+      </table>
 
 
     <!-- Option 1: Bootstrap Bundle with Popper -->

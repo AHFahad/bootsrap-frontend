@@ -13,48 +13,72 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('admin/login', function () {
-    return view('admin/login');
+// Route::get('admin/login', function () {
+//     return view('admin/login');
+// });
+
+// Route::get('/admin/Announcemen', function () {
+//     return view('admin/adminAnnouncement');
+// });
+
+// Route::get('/admin/editprofile', function () {
+//     return view('admin/adminEditProfile');
+// });
+
+// Route::get('/admin/home', function () {
+//     return view('admin/adminHome');
+// });
+
+// Route::get('/admin/userreports', function () {
+//     return view('admin/adminUserReports');
+// });
+
+// Route::get('/admin/ViewAllTransaction', function () {
+//     return view('admin/adminViewAllTransaction');
+// });
+
+// Route::get('/admin/ViewAllUserInfo', function () {
+//     return view('admin/adminViewAllUserInfo');
+// });
+
+Route::get('/', function () {
+    return view('login');
 });
 
-Route::get('/admin/Announcemen', function () {
-    return view('admin/adminAnnouncement');
-});
+Route::get('/login', 'LoginController@login');
+Route::post('/login', 'LoginController@verify');
+Route::get('/logout', 'LogoutController@index');
+Route::get('/adminHome', 'AdminHomeController@index')->name('adminHome');
+Route::get('/adminEditProfile', 'AdminHomeController@editProfile')->name('adminEditProfile');
+Route::get('/adminViewAllUserInfo', 'AdminHomeController@viewAllUserInfo')->name('adminViewAllUserInfo');
+Route::get('/adminViewAllTransaction', 'AdminHomeController@viewAllTransaction')->name('adminViewAllTransaction');
+Route::get('/adminUserReports', 'AdminHomeController@userReports')->name('adminUserReports');
+Route::get('/adminAnnouncement', 'AdminHomeController@announcement')->name('adminAnnouncement');
 
-Route::get('/admin/editprofile', function () {
-    return view('admin/adminEditProfile');
-});
 
-Route::get('/admin/home', function () {
-    return view('admin/adminHome');
-});
 
-Route::get('/admin/userreports', function () {
-    return view('admin/adminUserReports');
-});
 
-Route::get('/admin/ViewAllTransaction', function () {
-    return view('admin/adminViewAllTransaction');
-});
 
-Route::get('/admin/ViewAllUserInfo', function () {
-    return view('admin/adminViewAllUserInfo');
-});
+
+
+
+
+
+
+
+
+
 
 
 
 // seller
 
-Route::get('/seller/login', function () {
-    return view('seller/login');
-});
+
 Route::get('/seller/register', function () {
     return view('seller/sellerRegister');
 });
 
-// Route::get('/seller/applyforprimeseller', function () {
-//     return view('seller/applyForPrimeSeller');
-// });
+
 
 
 Route::get('/seller/home','SellerController@home')->name('seller.home');
@@ -75,12 +99,30 @@ Route::get('/seller/statementdetails','SellerController@statementDetails')->name
 
 
 // user or buyer
-Route::get('/user/editprofile', function () {
-    return view('user/editProfile');
-});
-Route::get('/user/orderhistory', function () {
-    return view('user/userorderHistory');
-});
-Route::get('/user/register', function () {
-    return view('user/userRegister');
-});
+Route::get('/user/Home', [App\Http\Controllers\UserController::class,'index']);
+
+Route::get('/user/editProfile', [App\Http\Controllers\UserController::class,'edit']);
+
+Route::get('/user/history', [App\Http\Controllers\UserController::class,'history']);
+
+Route::get('/user/register', [App\Http\Controllers\UserController::class,'register']);
+
+
+
+
+
+
+
+
+
+
+
+// Route::get('/user/editprofile', function () {
+//     return view('user/editProfile');
+// });
+// Route::get('/user/orderhistory', function () {
+//     return view('user/userorderHistory');
+// });
+// Route::get('/user/register', function () {
+//     return view('user/userRegister');
+// });
